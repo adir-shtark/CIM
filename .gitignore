@@ -1,0 +1,84 @@
+# Recreate the Vivado projects with:
+#   vivado -mode batch -source create_project.tcl
+#
+# Keep rtl/, IP/*.xci, IP/imageProcess/component.xml, IP/imageProcess/xgui/,
+# constraints/, imageProcessingSystem_bd.tcl, create_project.tcl,
+# and the application sources under SW/*/src/.
+
+# Vivado projects and everything they generate
+work/
+
+# Packaged-IP HDL is copied from rtl/ by create_project.tcl
+IP/imageProcess/src/
+
+# Vivado scratch, logs, and products
+.Xil/
+*.jou
+*.log
+*.str
+*.debug
+*.backup.jou
+*.backup.log
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.xpr
+*.xpr.user
+*.dcp
+*.bit
+*.ltx
+*.bin
+*.mcs
+*.prm
+*.mmi
+*.pb
+*.wdb
+*.wcfg
+*.vds
+*.xsa
+webtalk*
+webtalk.jou
+*.zip
+
+# Vitis workspace state and generated platform / BSP / builds.
+# Application sources (*.c, *.h, linker script, CMake) stay tracked.
+SW/.theia/
+SW/.metadata/
+SW/logs/
+SW/.lock
+SW/.peers.ini
+SW/.repo.yaml
+SW/.vitisWorkspace.json
+SW/**/build/
+SW/**/Debug/
+SW/**/Release/
+SW/**/_ide/
+SW/**/compile_commands.json
+SW/**/vitis-comp.json
+SW/**/app.yaml
+SW/**/bsp.yaml
+SW/pll_image/export/
+SW/pll_image/hw/
+SW/pll_image/ps7_cortexa9_0/
+SW/pll_image/zynq_fsbl/
+SW/pll_image/resources/
+SW/pll_image/logs/
+*.o
+*.d
+*.obj
+*.elf
+*.elf.size
+
+# Editor scratch
+**/.clangd
+image_p_status.txt
+
+# Captured images and host-side logs
+*.bmp
+*.raw
+image_output.txt
+python_script/putty.log
+python_script/serial_log.txt
